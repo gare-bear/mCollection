@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" ambiguous="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxI-md-d1a">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1024" id="WYg-QG-gl7"/>
+                                    <constraint firstAttribute="width" constant="1194" id="bGu-ST-wyG"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="mCollection Demo" id="o0d-cK-4Br">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="2C0-1G-VL4">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="pushBookmarkButton:" destination="BYZ-38-t0r" id="AZ8-Ll-mhN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="refresh" id="4zw-vG-J4o">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="pushRefreshButton:" destination="BYZ-38-t0r" id="sKf-pP-c0w"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="search" id="eEv-Ur-3lL">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="pushSearchButton:" destination="BYZ-38-t0r" id="CEe-xu-PZK"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Printer" id="FYm-8d-QqM">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0hs-Xg-eRx">
+                                <rect key="frame" x="20" y="50" width="482" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="482" id="SM0-fa-LPZ"/>
+                                </constraints>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanAndBag.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WYu-7b-MJT">
+                                <rect key="frame" x="522" y="50" width="482" height="211"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="482" id="7Eh-bu-PZi"/>
+                                    <constraint firstAttribute="height" constant="211" id="ucY-Pj-nlM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Scale Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQJ-6B-tZM">
+                                <rect key="frame" x="522" y="269" width="482" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="482" id="dav-w1-QAV"/>
+                                    <constraint firstAttribute="height" constant="50" id="yze-Yi-MXC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.1295828258" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQM-dC-DWT">
+                                <rect key="frame" x="522" y="385" width="482" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mAf-7o-2lp"/>
+                                    <constraint firstAttribute="width" constant="482" id="yS0-EX-a3g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Open Cash Drawer">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressCashDrawerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gM-lv-4jV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-3g-TmO">
+                                <rect key="frame" x="522" y="327" width="482" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="482" id="dbm-gx-0n1"/>
+                                    <constraint firstAttribute="height" constant="50" id="p8a-XF-5SX"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Print Receipt">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <font key="NSFont" size="20" name="ArialMT"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="pressPrintButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gO0-o8-o7A"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM6-45-qk6">
+                                <rect key="frame" x="522" y="443" width="482" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JJd-dA-QdI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Print Cannabis Label">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressCannabisLabelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ev6-98-jGp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GlH-3g-TmO" firstAttribute="leading" secondItem="0hs-Xg-eRx" secondAttribute="trailing" constant="20" id="0Ch-qJ-jYw"/>
+                            <constraint firstItem="0hs-Xg-eRx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="51b-3C-JCB"/>
+                            <constraint firstItem="XxI-md-d1a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ClG-92-WMY"/>
+                            <constraint firstItem="rQJ-6B-tZM" firstAttribute="top" secondItem="WYu-7b-MJT" secondAttribute="bottom" constant="8" id="D5k-Gi-Rri"/>
+                            <constraint firstItem="WYu-7b-MJT" firstAttribute="top" secondItem="XxI-md-d1a" secondAttribute="bottom" id="Dua-x7-O5c"/>
+                            <constraint firstItem="XxI-md-d1a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QPk-Th-DIg"/>
+                            <constraint firstItem="rQJ-6B-tZM" firstAttribute="leading" secondItem="0hs-Xg-eRx" secondAttribute="trailing" constant="20" id="RtG-aW-TZp"/>
+                            <constraint firstItem="gQM-dC-DWT" firstAttribute="leading" secondItem="0hs-Xg-eRx" secondAttribute="trailing" constant="20" id="TuI-KF-pxv"/>
+                            <constraint firstItem="RM6-45-qk6" firstAttribute="trailing" secondItem="gQM-dC-DWT" secondAttribute="trailing" id="Wbq-Wg-gnM"/>
+                            <constraint firstItem="XxI-md-d1a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xbm-q7-9YR"/>
+                            <constraint firstItem="GlH-3g-TmO" firstAttribute="top" secondItem="rQJ-6B-tZM" secondAttribute="bottom" constant="8" id="ZNU-dJ-5d1"/>
+                            <constraint firstItem="RM6-45-qk6" firstAttribute="leading" secondItem="gQM-dC-DWT" secondAttribute="leading" id="fca-H2-U8z"/>
+                            <constraint firstItem="0hs-Xg-eRx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfM-9q-YLM"/>
+                            <constraint firstItem="RM6-45-qk6" firstAttribute="top" secondItem="gQM-dC-DWT" secondAttribute="bottom" constant="8" id="m1V-8Z-EcW"/>
+                            <constraint firstItem="WYu-7b-MJT" firstAttribute="leading" secondItem="0hs-Xg-eRx" secondAttribute="trailing" constant="20" id="mjk-KN-spW"/>
+                            <constraint firstItem="0hs-Xg-eRx" firstAttribute="top" secondItem="XxI-md-d1a" secondAttribute="bottom" id="qzd-U5-xNT"/>
+                            <constraint firstItem="gQM-dC-DWT" firstAttribute="top" secondItem="GlH-3g-TmO" secondAttribute="bottom" constant="8" id="rgI-7u-d8C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="modelNameButtonItem" destination="FYm-8d-QqM" id="mU5-Vp-IFD"/>
+                        <outlet property="navigationBar" destination="XxI-md-d1a" id="LU5-D3-Nr8"/>
+                        <outlet property="scaleWeight" destination="rQJ-6B-tZM" id="NuY-d7-bSJ"/>
+                        <outlet property="tableView" destination="0hs-Xg-eRx" id="DSj-79-Wia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.678391959799" y="130.93525179856115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scanAndBag.jpg" width="618" height="272"/>
+    </resources>
+</document>
